@@ -17,6 +17,7 @@ df_CourseQuartered <- df_Course %>%
   mutate(Quarter.Start = paste0("Q", as.character(quarter(Start.Date)))) %>%
   mutate(Quarter.End = paste0("Q", as.character(quarter(End.Date))))
 
+#Queries
 df_CompSci <- filter(df_Combo, Title == "Computer Science")
 df_PaymentPlans <- filter(df_Combo, Payment.Plan == TRUE)
 df_FirstQuarterClassOptions <- filter(df_CourseQuartered, Quarter.Start == "Q1")
